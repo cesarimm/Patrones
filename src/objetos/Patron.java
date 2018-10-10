@@ -10,7 +10,7 @@ package objetos;
  * @author Roberto Cruz Leija
  */
 public class Patron {
-    
+
     // los elementos que tiene un patron en el contexto de clasificación supervisada 
     private double[] caracteristicas;
     private String claseOriginal;
@@ -27,11 +27,6 @@ public class Patron {
         this.caracteristicas = caracteristicas;
         this.claseOriginal = clase;
         this.claseResultante = "desconocida";
-    }
-
-    ///
-    public void setCaracteristicas(double[] caracteristicas) {
-        this.caracteristicas = caracteristicas;
     }
 
     /**
@@ -67,6 +62,14 @@ public class Patron {
      */
     public void setClaseResultante(String claseResultante) {
         this.claseResultante = claseResultante;
+    }
+
+   
+    /**
+     * @param caracteristicas the caracteristicas to set
+     */
+    public void setCaracteristicas(double[] caracteristicas) {
+        this.caracteristicas = caracteristicas;
     }
     
     
