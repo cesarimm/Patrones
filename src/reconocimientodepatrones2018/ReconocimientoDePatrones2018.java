@@ -50,15 +50,36 @@ public class ReconocimientoDePatrones2018 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
         Image imagenOriginal = IOImage.abrirImagen();
         JFrameImagen fo = new JFrameImagen(imagenOriginal);
         fo.setVisible(true);
         ClusterImagenes ci = new ClusterImagenes();
-        Image imagenRes = ci.calcularClusters(imagenOriginal, 150);
+        Image imagenRes = ci.calcularClusters(imagenOriginal, 100);
         JFrameImagen fr = new JFrameImagen(imagenRes);
         fr.setVisible(true);
         System.out.println();
-    }
+
+
+//        Tokenizador.leerDatos();
+  // CMeans cmeans = new CMeans(Tokenizador.instancias, 3);
+//        cmeans.clasifica();
+//        Grafica grafica = new Grafica("clasificacion","x1","x2");
+//        grafica.agregarSerie("Centroide0");
+//        grafica.agregarSerie("Centroide1");
+//        grafica.agregarSerie("Centroide2");
+//        ///grafica.agregarSerie("Centroide3");
+//        
+//        for(Patron patron: Tokenizador.instancias){
+//          Punto p = new Punto(patron.getCaracteristicas()[0],
+//                     patron.getCaracteristicas()[1]);
+//          grafica.agregarPunto(patron.getClaseOriginal(), p);
+//        }
+//        
+//        grafica.crearGraficaPuntos();
+        
+        
+   }
     
 }
 

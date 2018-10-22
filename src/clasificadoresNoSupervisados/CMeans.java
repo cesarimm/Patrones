@@ -21,7 +21,8 @@ public class CMeans {
     private int c;
     // centroidesIniciales 
     private ArrayList<Patron[]> centroides;
-    int[] contadores;  
+    int[] contadores; 
+    
     public CMeans(ArrayList<Patron> instancias, int c) {
         this.instancias = instancias;
         this.centroides = new ArrayList<>();
@@ -99,7 +100,7 @@ public class CMeans {
        if (dist< menor){
        menor = dist;
        patron.setClaseOriginal(centroides[x].getClaseOriginal());
-       }
+       }       
        }
       
     }

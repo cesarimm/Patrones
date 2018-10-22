@@ -5,9 +5,11 @@
         <group>
             <file>file:/D:/Documents/5to%20Semestre/ReconocimientoPat/ReconocimientoDePatrones2018-master/src/reconocimientodepatrones2018/ReconocimientoDePatrones2018.java</file>
             <file>file:/D:/Documents/5to%20Semestre/ReconocimientoPat/ReconocimientoDePatrones2018-master/src/objetos/Patron.java</file>
-            <file>file:/D:/Documents/5to%20Semestre/ReconocimientoPat/ReconocimientoDePatrones2018-master/src/practicaimagenes/ClusterImagenes.java</file>
+            <file>file:/D:/Documents/5to%20Semestre/ReconocimientoPat/ReconocimientoDePatrones2018-master/src/clasificadoresNoSupervisados/MinMax.java</file>
+            <file>file:/D:/Documents/5to%20Semestre/ReconocimientoPat/ReconocimientoDePatrones2018-master/nbproject/build-impl.xml</file>
+            <file>file:/D:/Documents/5to%20Semestre/ReconocimientoPat/ReconocimientoDePatrones2018-master/src/clasificadoresSupervisados/MinimaDistancia.java</file>
             <file>file:/D:/Documents/5to%20Semestre/ReconocimientoPat/ReconocimientoDePatrones2018-master/src/clasificadoresNoSupervisados/CMeans.java</file>
-            <file>file:/D:/Documents/5to%20Semestre/ReconocimientoPat/ReconocimientoDePatrones2018-master/src/herramientas/IOImage.java</file>
+            <file>file:/D:/Documents/5to%20Semestre/ReconocimientoPat/ReconocimientoDePatrones2018-master/src/herramientas/Grafica.java</file>
         </group>
     </open-files>
 </project-private>
