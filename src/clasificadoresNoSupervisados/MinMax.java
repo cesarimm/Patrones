@@ -9,6 +9,7 @@ import herramientas.Grafica;
 import herramientas.HerramientasClasificadores;
 import herramientas.Punto;
 import herramientas.Tokenizador;
+import java.awt.Color;
 import java.util.ArrayList;
 import objetos.Patron;
 
@@ -39,6 +40,56 @@ public class MinMax {
        this.centroides = new ArrayList<>();  
        this.delta=0;
     }
+   
+   public void clasificaImagenes(ArrayList<Patron> centroidesIniciales, ArrayList<Patron> instancias){
+       
+       this.centroides=centroidesIniciales;
+       this.instanciasAux = instancias;
+       
+       this.delta = alpha*(HerramientasClasificadores.calcularDistEucli(this.centroides.get(0), this.centroides.get(1))/2);
+       this.CalcularOtrosCentroides();
+       
+       
+        for(int i=0;i<this.centroides.size();i++){
+             
+                     Color color = new Color(
+                      (int)centroides.get(i).getCaracteristicas()[0],
+                      (int)centroides.get(i).getCaracteristicas()[1], 
+                      (int)centroides.get(i).getCaracteristicas()[2]);
+                     
+             
+          centroides.get(i).setClaseOriginal(color.getRGB()+"");   
+            //System.out.println(centroides.get(i).getClaseOriginal());
+          }
+         this.etiquetarImagenes();
+   }
+   
+   private void etiquetarImagenes(){
+       
+     for(int i=0;i<this.instancias.size();i++){
+         int pos = 0;
+         double menorAux, menor=herramientas.HerramientasClasificadores.calcularDistEucli(this.instancias.get(i), this.centroides.get(0));
+         
+         for(int j=1;j<this.centroides.size();j++){
+            
+             menorAux=herramientas.HerramientasClasificadores.calcularDistEucli(this.instancias.get(i), this.centroides.get(j));
+             
+             if(menorAux<menor){
+                 menor=menorAux;
+                 pos=j;
+             }
+         }
+         
+         this.instancias.get(i).setClaseOriginal(this.centroides.get(pos).getClaseOriginal());
+         //this.instancias.get(i).setCaracteristicas(this.centroides.get(pos).getCaracteristicas());
+       //  System.out.println("Clase: "+this.instancias.get(i).getClaseOriginal());
+     }
+       
+       System.out.println("Centroides: "+this.c);
+   }
+   
+   
+   
    
    public void clasifica(){
        this.obtenerRepresentativos();
@@ -101,7 +152,7 @@ public class MinMax {
    }
    
   private void CalcularOtrosCentroides(){
-      
+      System.out.println(this.c);
       double disAux, distancia, distanciaMayor=0;
       int pos=0;       
       //distancia = HerramientasClasificadores.calcularDistEucli(this.centroides.get(0), this.instanciasAux.get(0));
@@ -177,7 +228,7 @@ public class MinMax {
    public static void main(String args[]){
        
        Tokenizador.leerDatos();
-       MinMax mmx = new MinMax(Tokenizador.instancias, .3);
+       MinMax mmx = new MinMax(Tokenizador.instancias, .1);
        mmx.clasifica();
        
       
